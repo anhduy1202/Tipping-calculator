@@ -76,7 +76,8 @@ const Calculator = (props) => {
                     <div className="bill-input flex">
                         <label htmlFor="bill"> $ </label>
                         <input className="bill-input" type="text"
-                            lang="en"
+                            lang="en-US"
+                            step="any"
                             inputMode="decimal"
                             required
                             name="bill"
