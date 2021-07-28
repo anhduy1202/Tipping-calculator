@@ -4,10 +4,10 @@ import './scss/style.css';
 import Calculator from './Calculator';
 function App() {
   return (
-    <div className="App flex flex-jc-c flex-ai-c">
-      <p className="title"> SPLITTER</p>
+    <main className="App flex flex-jc-c flex-ai-c">
+      <header className="title"> SPLITTER</header>
         <Calculator/>
-    </div>
+    </main>
   );
 }
 
