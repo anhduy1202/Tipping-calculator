@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState} from "react";
 import CheckOut from "./CheckOut";
 import icon from './images/icon-person.svg';
 
@@ -76,6 +76,7 @@ const Calculator = (props) => {
                     <div className="bill-input flex">
                         <label htmlFor="bill"> $ </label>
                         <input className="bill-input" type="text"
+                            lang="en"
                             inputMode="decimal"
                             required
                             name="bill"
