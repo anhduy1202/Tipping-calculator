@@ -1,0 +1,86 @@
+@import "variables";
+@import "mixins";
+
+.title {
+    @include breakpoint-up(large) {
+        margin-top: 0;
+        margin-bottom: 0;
+    word-break: break-all;
+    max-width:5%;
+    letter-spacing: 0.35rem;
+    font-size: $font-sm;
+    color: $veryDarkCyan;
+    font-weight: 700;
+    transform: translateY(-100%);
+    }
+    word-break: break-all;
+    letter-spacing: 0.35rem;
+    font-size: $font-sm;
+    color: $veryDarkCyan;
+    font-weight: 700;
+    max-width: 18%;
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+   
+    
+}
+.calculator {
+    border-radius: 20px 20px 0 0 ;
+    background-color: $white;
+    min-width: 100%;
+    padding-left: 1.875rem;
+    padding-right: 1.875rem;
+    flex-direction: column;
+  
+    @include breakpoint-up(large) {
+        align-items: center;
+        margin-top: 0;
+      min-width: 60%;
+        display: grid;
+        column-gap: 1rem;
+        box-shadow: 0px 30px 40px 0 $lightBlueShadow;    
+        grid-template-areas:
+        "tip checkout";
+        
+    }
+   &-bill {
+    
+    min-width: 100%;
+    color: $darkGrayishCyan;
+    font-size: $font-xs;
+    font-weight: 700;
+    @include breakpoint-up(large) { 
+        font-size: $font-sm;
+    }
+    
+   }
+}
+
+.bill-input {
+   
+    background-color: $lightGrayishCyan;
+    padding-left: 1rem;
+    &:hover {
+        color: $strongCyan;
+        font-weight: 700;
+    }
+    @include breakpoint-up(large) { 
+        font-size: $font-md;
+    }
+    
+}
+
+.desktop-container {
+@include breakpoint-up(large) {
+    grid-area:tip;
+    max-width: 80%;
+   
+}
+}
+
+.desktop-checkout {
+    @include breakpoint-up(large) {
+        grid-area:checkout;
+      
+    }
+}

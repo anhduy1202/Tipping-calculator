@@ -1,0 +1,30 @@
+@import 'variables';
+@import 'mixins';
+.people {
+    margin-top: 0.5rem;
+   
+  
+    &-header {
+    
+     font-size: $font-xs;
+     color : $darkGrayishCyan;
+     font-weight: 700;
+     @include breakpoint-up(large) { 
+        font-size: $font-sm;
+    }
+    }
+    
+}
+
+.peopleInput {
+    background-color: $lightGrayishCyan;
+    margin-top: 1rem;
+    
+    @include breakpoint-up(large) { 
+        font-size: $font-md;
+    }
+   
+      
+   
+   
+}

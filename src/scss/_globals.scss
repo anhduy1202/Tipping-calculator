@@ -1,0 +1,73 @@
+@import "variables";
+@import "mixins";
+
+html {
+  
+    font-size: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+   
+    
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: $lightBlue;
+
+padding:0;
+margin:0;
+font-size: $font-md;
+font-family: $spaceMono;
+
+
+}
+input {
+    font-family: $spaceMono;
+    font-size: $font-sm;
+    border: none;
+  background-color: $lightGrayishCyan;  
+  text-align: right;
+  min-width: 90%;
+  color: $veryDarkCyan;
+  font-weight: 700;
+  
+  
+  &:focus {
+      outline: none;
+  }
+
+}
+
+.App {
+    width:100vw;
+    min-height: 100vh;
+    flex-direction: column;
+   
+}
+
+.flex {
+    display:flex;
+    &-jc-c {
+        justify-content: center;
+    }
+    &-ai-c {
+        align-items: center;
+    }
+    &-ai-fe {
+        align-items: flex-end;
+    }
+    &-ai-fs {
+        align-items: flex-start;
+    }
+}
+
+.grid {
+    display: grid;
+}
+button {
+    outline: none;
+    background-color: transparent;
+    border: transparent;
+}

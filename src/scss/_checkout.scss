@@ -1,0 +1,109 @@
+@import "variables";
+@import "mixins";
+
+.checkout {
+    font-size: $font-sm;
+
+    align-items: center;
+    margin-top: 1.5rem;
+    padding: 0 1rem 0 1rem; 
+    background-color: $veryDarkCyan;
+    border-radius: 10px;
+    grid-template-columns: repeat(2,minmax(0,0.5fr));
+    grid-template-rows: repeat(3, 0.5fr);
+    grid-template-areas:
+     "tip   tiptotal "
+     "total totalmoney"
+     "reset reset";
+     margin-bottom: 2rem;
+     @include breakpoint-up(large) {
+        grid-template-columns: repeat(2,minmax(0,12rem));
+        grid-template-rows: repeat(3, 8rem);
+         
+     }
+}
+
+.tip-amount {
+    text-align: left;
+    grid-area: tip;
+    font-size: $font-xs;
+    color : $darkGrayishCyan;
+    font-weight: 700;
+    &-header {
+        color: white;
+    }
+    @include breakpoint-up(large) { 
+        padding-left: 2rem;
+    }
+}
+
+.tip-total {
+    font-size: $font-mdsm;
+    grid-area: tiptotal;
+    text-align: right;
+    color: $strongCyan;
+    font-weight: 700;
+    @include breakpoint-up(large) { 
+        font-size: $font-mdlg;
+        padding-right: 2rem;
+    }
+}
+
+.total {
+    text-align: left;
+    grid-area: total;
+    font-size: $font-xs;
+    color : $darkGrayishCyan;
+    font-weight: 700;
+    &-header {
+        color: white;
+    }
+    @include breakpoint-up(large) { 
+        padding-left: 2rem;
+    }
+}
+
+.total-money {
+    font-size: $font-mdsm;
+    grid-area: totalmoney;
+    text-align: right;
+    color: $strongCyan;
+    font-weight: 700;
+    @include breakpoint-up(large) { 
+        font-size: $font-mdlg;
+        padding-right: 2rem;
+    }
+}
+.reset {
+    cursor: pointer;
+    font-family: $spaceMono;
+    font-weight: 700;
+    color: $veryDarkCyan;
+    font-size: $font-sm;
+    justify-self:center;
+    grid-area: reset;
+    background-color: $strongCyan;
+   min-width:80%;
+   margin-top: 1rem;
+   margin-bottom: 1rem;
+   padding: 0.5rem 0 0.5rem 0;
+   border-radius: 5px;
+      
+    
+}
+.cantReset {
+
+    font-family: $spaceMono;
+    font-weight: 700;
+    color: #0b646a;
+    font-size: $font-sm;
+    justify-self:center;
+    grid-area: reset;
+    background-color: #0d686d;
+   min-width:80%;
+   margin-top: 1rem;
+   margin-bottom: 1rem;
+   padding: 0.5rem 0 0.5rem 0;
+   border-radius: 5px;
+
+}
